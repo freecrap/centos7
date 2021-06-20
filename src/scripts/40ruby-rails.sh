@@ -26,10 +26,6 @@ export PATH="/usr/pgsql-11/bin:$PATH"
 
 gem install pg -- --with-pg-config=/usr/pgsql-11/bin/pg_config
 
-# assuming there's a Gemfile here...
-cd /root/src && bundle install
-
-
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 yum -y localinstall google-chrome-stable_current_x86_64.rpm
 rm -rf google-chrome-stable_current_x86_64.rpm

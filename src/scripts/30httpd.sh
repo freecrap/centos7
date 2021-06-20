@@ -6,8 +6,6 @@ echo "==========================================================================
 echo " Setting up apache web server "
 echo "============================================================================================================================================================="
 
-rm -rf /etc/httpd
-cp -r /app/system/_conf/httpd /etc/
 
 ln -s /var/log/httpd /etc/httpd/logs
 ln -s /usr/lib64/httpd/modules /etc/httpd/modules
