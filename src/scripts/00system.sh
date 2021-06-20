@@ -8,7 +8,7 @@ echo "==========================================================================
 
 yum install -y epel-release yum-utils
 yum-config-manager --enable epel
-yum clean all && sudo yum update -y
+yum clean all && yum update -y
 yum -y groupinstall 'Development Tools'
 yum -y install mc httpd wget curl mc nc netcat nmap iptables-services mariadb mariadb-server mysql-devel
 yum -y install ImageMagick

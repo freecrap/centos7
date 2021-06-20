@@ -11,7 +11,7 @@ do
     
     echo "`date +'%H:%M'` $installerfile"
     INSFN=`basename $installerfile`
-    bash "$installerfile" -H > "./logs/$INSFN.out.log" 2> "./logs/$INSFN.err.log"
+    bash "$installerfile" -H #> "./logs/$INSFN.out.log" 2> "./logs/$INSFN.err.log"
 done
 
 echo -ne "\007"
