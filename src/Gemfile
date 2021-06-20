@@ -5,6 +5,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.5'
 
+# use local mimemagic gem to delay update to rails 6.1
+gem 'mimemagic', '0.3.3', git: "https://github.com/freecrap/mimemagic-0.3.3"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 
@@ -132,11 +135,15 @@ end # :production
 #sentry.io
 gem "sentry-raven"
 
+# PG tool. also has a route mount
+gem 'pghero', git: "https://github.com/freecrap/pghero"
 gem 'pg_query', '>= 0.9.0'
-
+# view/build reports/BI
+gem 'blazer', git: "https://github.com/freecrap/blazer"
 # log various stuff in the app
 gem 'notable'
 
+gem 'trend', git: "https://github.com/freecrap/trend"
 
 # send events to statsd -> grafana
 gem 'statsd-instrument', require: false
@@ -162,7 +169,8 @@ gem 'http_accept_language'
 
 # the rubygems version is broken
 # gem 'active_model_otp', :git => 'https://github.com/heapsource/active_model_otp.git'
-# the git http clone command was failiing for some stupid reason, got this set up locally
+# the git http clone command was failiing for some reason, got this set up locally
+gem 'active_model_otp', git: "https://github.com/freecrap/active_model_otp"
 gem 'rqrcode', require: false
 
 gem 'twilio-ruby', require: false
@@ -177,7 +185,7 @@ gem 'activerecord-session_store'
 
 gem 'slim'
 gem 'haml'
-# If you'd like to replace Rails's Erb-based generators with Haml, add haml-rails to your Gemfile as well.
+
 #gem 'haml-rails'
 
 gem 'paper_trail'
@@ -185,7 +193,7 @@ gem 'action_policy'
 
 gem "select2-rails"
 
-# for the various templates throughout the app
+# template engines
 gem 'liquid'
 gem 'RedCloth'
 
@@ -208,11 +216,10 @@ gem 'draper'
 
 gem 'whenever', require: false
 
-# for the signup form
-# https://github.com/markets/invisible_captcha
 gem 'invisible_captcha'
 
 # message queueing
 gem 'bunny', require: false
+gem 'sneakers', git: "https://github.com/freecrap/sneakers"
 
 gem 'credit_card_validator', require: false
