@@ -6,4 +6,5 @@ COPY ./src/ /root/src/
 
 RUN ./install.sh
 RUN echo "rvm use 2.5.5" >> ~/.bashrc
+RUN bash -l -c "gem install pg -v 1.2.1 -- --with-pg-config=/usr/pgsql-11/bin/pg_config"
 RUN bash -l -c bundle install
