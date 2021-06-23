@@ -23,6 +23,7 @@ yum -y install chromedriver chromium
 #yum -y install memcached memcache redis
 #yum -y install nmap nc netcat iptables-services multitail screen
 yum -y install python-devel python34-devel
+yum -y install cronie
 
 cd $WORKDIR
 rm -- "$0"
