@@ -10,7 +10,7 @@ yum install -y epel-release yum-utils
 yum-config-manager --enable epel
 yum clean all && yum update -y
 yum -y groupinstall 'Development Tools'
-yum -y install sudo mc httpd wget curl mc nc netcat nmap iptables-services mariadb mysql-devel
+yum -y install sudo mc httpd wget curl mc nc netcat nmap iptables-services mariadb mysql-devel psmisc
 yum -y install ImageMagick
 yum -y install httpd httpd-tools httpd-devel libxml libxml-devel readline readline-devel ncurses ncurses-devel zlib zlib-devel openssl openssl-devel bzip2 bzip2-devel
 yum -y install openssl openssl-devel curl wget curl-devel pygpgme
