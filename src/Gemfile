@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails'#, groups: [:development, :test]
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+gem 'dotenv-rails', git: "https://github.com/bkeepers/dotenv", branch: "master"
 
-ruby '2.5.5'
+ruby '3.0.1'
 
 # use local mimemagic gem to delay update to rails 6.1
-gem 'mimemagic', '0.3.3', git: "https://github.com/freecrap/mimemagic-0.3.3", branch: "main"
+gem 'mimemagic' #, '0.3.3', git: "https://github.com/freecrap/mimemagic-0.3.3", branch: "main"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0'
+gem 'rails', '~> 6.1.0'
 
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
@@ -102,7 +102,7 @@ end
 
 group :test do
     gem 'webrick'
-    gem 'rspec-rails', '4.0.0.beta3'
+    gem 'rspec-rails', '~> 4.0' #, '4.0.0.beta3'
     # TODO bump rspec to stable once released
     gem 'guard-rspec'
     gem 'guard-shell'
@@ -133,7 +133,10 @@ group :production do
 end # :production
 
 #sentry.io
-gem "sentry-raven"
+#gem "sentry-raven"
+gem "sentry-ruby"
+gem "sentry-rails"
+gem "sentry-sidekiq"
 
 # PG tool. also has a route mount
 gem 'pghero', git: "https://github.com/freecrap/pghero", branch: "main"
@@ -170,7 +173,7 @@ gem 'http_accept_language'
 # the rubygems version is broken
 # gem 'active_model_otp', :git => 'https://github.com/heapsource/active_model_otp.git'
 # the git http clone command was failiing for some stupid reason, got this set up locally
-gem 'active_model_otp', git: "https://github.com/freecrap/active_model_otp", branch: "main"
+gem 'active_model_otp'#, git: "https://github.com/freecrap/active_model_otp", branch: "main"
 gem 'rqrcode', require: false
 
 gem 'twilio-ruby', require: false
@@ -191,7 +194,9 @@ gem 'haml'
 gem 'paper_trail'
 gem 'action_policy'
 
-gem "select2-rails"
+#gem "select2-rails"
+gem "select2-rails", git: "https://github.com/argerim/select2-rails", branch: "master"
+
 
 # for the various templates throughout the app
 gem 'liquid'
@@ -225,3 +230,5 @@ gem 'bunny', require: false
 gem 'sneakers', git: "https://github.com/freecrap/sneakers", branch: "main"
 
 gem 'credit_card_validator', require: false
+
+gem 'rexml', '~> 3.2', '>= 3.2.4'
