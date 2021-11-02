@@ -22,8 +22,8 @@ curl -sSL https://get.rvm.io | bash -s stable
 
 source /etc/profile.d/rvm.sh
 
-rvm install 3.0.1
-rvm use 3.0.1 --default
+rvm install 3.0.2
+rvm use 3.0.2 --default
 
 source /etc/profile.d/rvm.sh
 
