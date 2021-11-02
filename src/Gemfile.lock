@@ -16,7 +16,7 @@ GIT
       railties (>= 3.2)
 
 GIT
-  remote: https://github.com/freecrap/blazer
+  remote: https://github.com/nicksterious/blazer
   revision: 67ecdcfc1ebcf6aaa00b7062d7e49f1d67a2eb8b
   branch: main
   specs:
@@ -27,15 +27,7 @@ GIT
       safely_block (>= 0.1.1)
 
 GIT
-  remote: https://github.com/freecrap/pghero
-  revision: 7f077aa07bdf096e5bdb4da2f07729a5f179d81a
-  branch: main
-  specs:
-    pghero (2.4.1)
-      activerecord (>= 5)
-
-GIT
-  remote: https://github.com/freecrap/sneakers
+  remote: https://github.com/nicksterious/sneakers
   revision: b4862cf390f757bcfd43c3da27ba90a292fda9cd
   branch: main
   specs:
@@ -47,7 +39,7 @@ GIT
       thor
 
 GIT
-  remote: https://github.com/freecrap/trend
+  remote: https://github.com/nicksterious/trend
   revision: 3850878caeb33059b7e5c5dba49e3416cd71370a
   branch: main
   specs:
@@ -277,6 +269,7 @@ GEM
     ffi (1.15.3)
     fiber-local (1.0.0)
     flamegraph (0.9.5)
+    foreman (0.87.2)
     formatador (0.3.0)
     gastly (1.1.0)
       mini_magick (~> 4.2)
@@ -660,6 +653,7 @@ DEPENDENCIES
   faker
   faraday
   flamegraph
+  foreman
   gastly
   geocoder
   geokit
@@ -685,7 +679,6 @@ DEPENDENCIES
   paper_trail
   pg
   pg_query (>= 0.9.0)
-  pghero!
   prowl
   puma (~> 3.11)
   rack-mini-profiler

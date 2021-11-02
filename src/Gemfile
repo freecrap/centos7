@@ -6,7 +6,7 @@ gem 'dotenv-rails', git: "https://github.com/bkeepers/dotenv", branch: "master"
 ruby '3.0.1'
 
 # use local mimemagic gem to delay update to rails 6.1
-gem 'mimemagic' #, '0.3.3', git: "https://github.com/freecrap/mimemagic-0.3.3", branch: "main"
+gem 'mimemagic' #, '0.3.3', git: "https://github.com/nicksterious/mimemagic-0.3.3", branch: "main"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'
@@ -133,20 +133,17 @@ group :production do
 end # :production
 
 #sentry.io
-#gem "sentry-raven"
 gem "sentry-ruby"
 gem "sentry-rails"
 gem "sentry-sidekiq"
 
-# PG tool. also has a route mount
-gem 'pghero', git: "https://github.com/freecrap/pghero", branch: "main"
 gem 'pg_query', '>= 0.9.0'
 # view/build reports/BI
-gem 'blazer', git: "https://github.com/freecrap/blazer", branch: "main"
+gem 'blazer', git: "https://github.com/nicksterious/blazer", branch: "main"
 # log various stuff in the app
 gem 'notable'
 
-gem 'trend', git: "https://github.com/freecrap/trend", branch: "main"
+gem 'trend', git: "https://github.com/nicksterious/trend", branch: "main"
 
 # send events to statsd -> grafana
 gem 'statsd-instrument', require: false
@@ -173,7 +170,7 @@ gem 'http_accept_language'
 # the rubygems version is broken
 # gem 'active_model_otp', :git => 'https://github.com/heapsource/active_model_otp.git'
 # the git http clone command was failiing for some stupid reason, got this set up locally
-gem 'active_model_otp'#, git: "https://github.com/freecrap/active_model_otp", branch: "main"
+gem 'active_model_otp'#, git: "https://github.com/nicksterious/active_model_otp", branch: "main"
 gem 'rqrcode', require: false
 
 gem 'twilio-ruby', require: false
@@ -227,8 +224,11 @@ gem 'invisible_captcha'
 
 # message queueing
 gem 'bunny', require: false
-gem 'sneakers', git: "https://github.com/freecrap/sneakers", branch: "main"
+gem 'sneakers', git: "https://github.com/nicksterious/sneakers", branch: "main"
 
 gem 'credit_card_validator', require: false
 
 gem 'rexml', '~> 3.2', '>= 3.2.4'
+
+# foreman
+gem 'foreman', require: false
