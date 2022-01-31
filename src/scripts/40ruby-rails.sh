@@ -31,9 +31,14 @@ source /etc/profile.d/rvm.sh
 
 gem install bundler
 
+# export the pg bin path
 export PATH="/usr/pgsql-11/bin:$PATH"
 
-gem install pg -- --with-pg-config=/usr/pgsql-11/bin/pg_config
+# config bundler for pg gem
+bundle config build.pg --with-pg-config=/usr/pgsql-11/bin/pg_config --with-pg-dir=/usr/pgsql-11
+
+# try installing the gem
+gem install pg -- --with-pg-config=/usr/pgsql-11/bin/pg_config --with-pg-dir=/usr/pgsql-11
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 yum -y localinstall google-chrome-stable_current_x86_64.rpm

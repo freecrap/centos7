@@ -17,7 +17,7 @@ yum install centos-release-scl -y
 sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
 yum -y install pgdg-redhat-repo-latest.noarch.rpm
-yum -y --nogpgcheck install postgresql11* libpq libpq-devel libpqxx libpqxx-devel
+yum -y --nogpgcheck install postgresql11* libpq libpq-devel libpqxx libpqxx-devel libpq-dev
 rm -rf pgdg-redhat-repo-latest.noarch.rpm
 
 
