@@ -29,7 +29,8 @@ source /etc/profile.d/rvm.sh
 
 # at this point we should logoffski for rvm profile to take effect
 
-gem install bundler
+# gem install bundler
+gem install bundler -v 2.2.32
 
 # export the pg bin path
 export PATH="/usr/pgsql-11/bin:$PATH"
